@@ -1,0 +1,19 @@
+/*.card {
+  border: 1px solid #2C3436 ;
+  margin: 20px;
+  padding: 0px
+}
+
+.d-lg-inline {
+display: flex;
+width: 100%;
+height: 50%
+}*/
+body {
+  background-color: #2C3436;
+}
+/*.card-body{
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+}*/

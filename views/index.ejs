@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Moviz</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container my-3">
+       <div class="row">
+        <%for(var i =0; i<film.results.length; i++) {
+          %>
+          <div class="col-lg-4">
+            <div class="card" >
+              <img class="card-img-top" alt="Derniers films à l'affiche" src=<%= "https://image.tmdb.org/t/p/w500/" + film.results[i].poster_path %>>
+              <div class="card-body">
+                
+                  <a href="/like?type=coeur&couleur=rouge">  
+                    Like <img src="/images/noun_Heart_3429586-svg.svg" background-color="">
+                  </a>
+                
+                <h5 class="card-title"><%= film.results[i].title %></h5>
+                <p class="card-text"><%= film.results[i].overview.slice(0,150) + "..." %></p>
+              </div>
+            </div>
+         </div>
+          <%
+           }
+           %>
+        </div>
+      </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
